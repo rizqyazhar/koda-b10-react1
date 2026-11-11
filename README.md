@@ -1,3 +1,3 @@
 # Minitask React1
 
-Create Survey Form page with ReactJS without styling
+Create Survey form page with react without any styling
