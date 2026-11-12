@@ -6,7 +6,7 @@ export default function InputChoice(props) {
         class='outline-none border-b border-violet-50 py-2 label-sm md:text-base'
         {...rest}
       />
-      <label for={forInput} class='text-sm md:text-base'>
+      <label forHtml={forInput} class='text-sm md:text-base'>
         {label}
       </label>
     </div>
