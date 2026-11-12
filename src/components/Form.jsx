@@ -1,7 +1,7 @@
 export default function Form(props) {
-  const { children, title, description, email } = props;
+  const { children, title, description, email, ...rest } = props;
   return (
-    <form class='w-fit flex flex-col gap-4'>
+    <form {...rest} class='w-fit flex flex-col gap-4'>
       <div class='bg-white shadow-sm border-t-8 border-violet-700 rounded-lg'>
         <div class='flex flex-col gap-4 px-4 md:px-8 py-2 py-4'>
           <div class='flex flex-col gap-1'>
