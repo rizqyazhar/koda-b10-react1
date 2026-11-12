@@ -90,7 +90,7 @@ export default function SurveyFormPage() {
                 value='perempuan'
               />
             </div>
-            <p>{errors.gender?.message}</p>
+            <p className='text-red-500 text-xs'>{errors.gender?.message}</p>
           </div>
         </div>
 
@@ -115,8 +115,8 @@ export default function SurveyFormPage() {
               id='tidak'
               value='tidak'
             />
+            <p className='text-red-500 text-xs'>{errors.smoking?.message}</p>
           </div>
-          <p>{errors.smoking?.message}</p>
         </div>
 
         <div class='bg-white shadow-sm rounded-lg'>

@@ -11,7 +11,7 @@ export default function InputNormal(props) {
           className='outline-none border-b border-violet-50 py-2 text-sm md:text-base'
           {...rest}
         />
-        <p>{errorsMessage}</p>
+        <p className='text-red-500 text-xs'>{errorsMessage}</p>
       </div>
     </div>
   );
