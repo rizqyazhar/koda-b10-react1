@@ -23,6 +23,7 @@ export default function SurveyFormPage() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     defaultValues: {
@@ -41,6 +42,7 @@ export default function SurveyFormPage() {
     getData.push(data);
 
     window.localStorage.setItem("survey", JSON.stringify(getData));
+    reset();
     return;
   };
 
