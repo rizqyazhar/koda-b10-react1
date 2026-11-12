@@ -5,6 +5,7 @@ import Layout from "../layout/Layout";
 import Form from "../components/Form";
 import InputNormal from "../components/InputNormal";
 import InputChoice from "../components/InputChoice";
+import Button from "../components/Button";
 
 const schema = yup.object({
   nama: yup.string().required("Nama harus diisi"),
@@ -159,9 +160,11 @@ export default function SurveyFormPage() {
             </div>
           </div>
         </div>
-        <div>
-          <button type='submit'>Submit</button>
-          <button type='reset'>Reset</button>
+        <div class='w-full flex justify-between items-center'>
+          <Button type='submit' variant='primary'>
+            Submit
+          </Button>
+          <Button type='reset'>Reset</Button>
         </div>
       </Form>
     </Layout>
