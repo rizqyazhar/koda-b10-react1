@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import Layout from "../layout/Layout";
 import Form from "../components/Form";
+import InputNormal from "../components/InputNormal";
 
 const schema = yup.object({
   nama: yup.string().required("Nama harus diisi"),
@@ -43,32 +44,25 @@ export default function SurveyFormPage() {
         title='Survey Rokok Favorit'
         description='Terima kasih atas ketersediaan anda untuk mengisi survey'
         email='johndoe@gmail.com'>
-        <div>
-          <label forHtml='nama'>
-            Siapa nama anda?<span>*</span>
-          </label>
-          <input
-            type='text'
-            {...register("nama")}
-            id='nama'
-            placeholder='Jawaban Anda'
-          />
-          <p>{errors.nama?.message}</p>
-        </div>
-        <div>
-          <div>
-            <label forHtml='umur'>
-              Berapa umur anda?<span>*</span>
-            </label>
-            <input
-              type='number'
-              {...register("umur")}
-              id='umur'
-              placeholder='Jawaban Anda'
-            />
-            <p>{errors.umur?.message}</p>
-          </div>
-        </div>
+        <InputNormal
+          errorsMessage={errors.nama?.message}
+          isRequired={true}
+          forHtml='nama'
+          type='text'
+          {...register("nama")}
+          id='nama'
+          placeholder='Jawaban Anda'>
+          Siapa nama anda?
+        </InputNormal>
+        <InputNormal
+          errorsMessage={errors.umur?.message}
+          isRequired={true}
+          type='number'
+          {...register("umur")}
+          id='umur'
+          placeholder='Jawaban Anda'>
+          Berapa umur anda?
+        </InputNormal>
         <div>
           <div>
             <p>
