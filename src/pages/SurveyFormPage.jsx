@@ -35,8 +35,13 @@ export default function SurveyFormPage() {
     resolver: yupResolver(schema),
   });
 
+  const getData = JSON.parse(window.localStorage.getItem("survey")) || [];
+
   const pushData = (data) => {
-    console.log(data);
+    getData.push(data);
+
+    window.localStorage.setItem("survey", JSON.stringify(getData));
+    return;
   };
 
   return (
