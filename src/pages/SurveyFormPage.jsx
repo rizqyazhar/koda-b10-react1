@@ -4,6 +4,7 @@ import * as yup from "yup";
 import Layout from "../layout/Layout";
 import Form from "../components/Form";
 import InputNormal from "../components/InputNormal";
+import InputChoice from "../components/InputChoice";
 
 const schema = yup.object({
   nama: yup.string().required("Nama harus diisi"),
@@ -63,102 +64,98 @@ export default function SurveyFormPage() {
           placeholder='Jawaban Anda'>
           Berapa umur anda?
         </InputNormal>
-        <div>
-          <div>
-            <p>
-              Apa jenis kelamin anda?<span>*</span>
+
+        <div class='bg-white shadow-sm rounded-lg'>
+          <div class='flex flex-col gap-4 px-4 md:px-8 py-2 md:py-4'>
+            <p class='font-medium text-sm md:text-base'>
+              Apa jenis kelamin anda?
+              <span class='text-red-500'>*</span>
             </p>
-            <div>
-              <div>
-                <input
-                  type='radio'
-                  {...register("gender")}
-                  id='male'
-                  value='laki-laki'
-                />
-                <label forHtml='male'>Laki-laki</label>
-              </div>
-              <div>
-                <input
-                  type='radio'
-                  {...register("gender")}
-                  id='female'
-                  value='perempuan'
-                />
-                <label forHtml='female'>Perempuan</label>
-              </div>
-              <p>{errors.gender?.message}</p>
+            <div class='flex gap-8 items-center'>
+              <InputChoice
+                label='Laki-laki'
+                forInput='male'
+                type='radio'
+                {...register("gender")}
+                id='male'
+                value='laki-laki'
+              />
+              <InputChoice
+                label='Perempuan'
+                forInput='female'
+                type='radio'
+                {...register("gender")}
+                id='female'
+                value='perempuan'
+              />
             </div>
+            <p>{errors.gender?.message}</p>
           </div>
         </div>
-        <div>
-          <div>
-            <p>
-              Apakah anda perokok?<span>*</span>
+
+        <div class='bg-white shadow-sm rounded-lg'>
+          <div class='flex flex-col gap-4 px-4 md:px-8 py-2 md:py-4'>
+            <p class='font-medium text-sm md:text-base'>
+              Apakah anda perokok?<span class='text-red-500'>*</span>
             </p>
-            <div>
-              <div>
-                <input
-                  type='radio'
-                  {...register("smoking")}
-                  id='ya'
-                  value='ya'
-                />
-                <label forHtml='ya'>Ya</label>
-              </div>
-              <div>
-                <input
-                  type='radio'
-                  {...register("smoking")}
-                  id='tidak'
-                  value='tidak'
-                />
-                <label forHtml='tidak'>Tidak</label>
-              </div>
-              <p>{errors.smoking?.message}</p>
-            </div>
+            <InputChoice
+              label='Ya'
+              forInput='ya'
+              type='radio'
+              {...register("smoking")}
+              id='ya'
+              value='ya'
+            />
+            <InputChoice
+              label='Tidak'
+              forInput='tidak'
+              type='radio'
+              {...register("smoking")}
+              id='tidak'
+              value='tidak'
+            />
           </div>
+          <p>{errors.smoking?.message}</p>
         </div>
-        <div>
-          <div>
-            <p>Jika anda perokok, rokok apa yang anda pernah coba?</p>
-            <div>
-              <div>
-                <input
-                  type='checkbox'
-                  {...register("cigarettes")}
-                  id='ggm'
-                  value='ggm'
-                />
-                <label forHtml='ggm'>Gudang Garam Filter</label>
-              </div>
-              <div>
-                <input
-                  type='checkbox'
-                  {...register("cigarettes")}
-                  id='ls'
-                  value='ls'
-                />
-                <label forHtml='ls'>Lucky Strike</label>
-              </div>
-              <div>
-                <input
-                  type='checkbox'
-                  {...register("cigarettes")}
-                  id='mb'
-                  value='mb'
-                />
-                <label forHtml='mb'>Marlboro</label>
-              </div>
-              <div>
-                <input
-                  type='checkbox'
-                  {...register("cigarettes")}
-                  id='es'
-                  value='es'
-                />
-                <label forHtml='es'>Esse</label>
-              </div>
+
+        <div class='bg-white shadow-sm rounded-lg'>
+          <div class='flex flex-col gap-4 px-4 md:px-8 py-2 md:py-4'>
+            <p class='font-medium text-sm md:text-base'>
+              Jika anda perokok, rokok apa yang anda pernah coba?
+            </p>
+            <div class='flex flex-col gap-2'>
+              <InputChoice
+                label='Gudang Garam Filter'
+                forInput='ggm'
+                type='checkbox'
+                {...register("cigarettes")}
+                id='ggm'
+                value='ggm'
+              />
+              <InputChoice
+                label='Lucky Strike'
+                forInput='ls'
+                type='checkbox'
+                {...register("cigarettes")}
+                id='ls'
+                value='ls'
+              />
+              <InputChoice
+                label='Marlboro'
+                forInput='mb'
+                type='checkbox'
+                {...register("cigarettes")}
+                id='mb'
+                value='mb'
+              />
+              <InputChoice
+                label='Esse'
+                forInput='es'
+                type='checkbox'
+                {...register("cigarettes")}
+                id='es'
+                value='es'
+              />
             </div>
           </div>
         </div>
