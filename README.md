@@ -1,7 +1,7 @@
 # Minitask React1
 
-Create Survey form page with react without any styling
-
-## Screenshot Output
-
-![screenshot](/src/assets/ss-readme.png)
+- Rereate Survey form page with tailwindcss styling
+- Use reac-hook-form for handling form
+- save data to local storage
+- display data in table in another page
+- add router with react-router
