@@ -46,7 +46,13 @@ export default function SurveyFormPage() {
       cigarettes.includes(item),
     );
 
-    const tempData = { nama, umur, gender, smoking, cigarettesCompared };
+    const tempData = {
+      nama,
+      umur,
+      gender,
+      smoking,
+      cigarettes: cigarettesCompared,
+    };
 
     getData.push(tempData);
 
