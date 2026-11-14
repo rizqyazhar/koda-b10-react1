@@ -1,9 +1,9 @@
 export default function TableLayout(props) {
   const { children } = props;
   return (
-    <div className='w-full md:w-11/12 lg:w-3/4 overflow-x-auto rounded-xl shadow-md'>
-      <table className='w-full table-auto border-collapse bg-white'>
-        <thead className='bg-violet-700 text-white'>
+    <div className='w-full h-80 md:h-100 md:w-11/12 lg:w-3/4 bg-white overflow-auto scrollbar-thin rounded-xl shadow-md'>
+      <table className='table w-full table-auto border-collapse bg-white'>
+        <thead className='bg-violet-700 text-white sticky top-0'>
           <tr>
             <th
               className='text-nowrap p-2 border-b-2 border-violet-200'
@@ -58,7 +58,7 @@ export default function TableLayout(props) {
             </th>
           </tr>
         </thead>
-        <tbody className='overflow-y-auto h-80'>{children}</tbody>
+        <tbody>{children}</tbody>
       </table>
     </div>
   );
