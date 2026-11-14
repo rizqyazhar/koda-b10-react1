@@ -56,7 +56,7 @@ export default function SurveyFormPage() {
         <InputNormal
           errorsMessage={errors.nama?.message}
           isRequired={true}
-          forHtml='nama'
+          forInput='nama'
           type='text'
           {...register("nama")}
           id='nama'
@@ -66,6 +66,7 @@ export default function SurveyFormPage() {
         <InputNormal
           errorsMessage={errors.umur?.message}
           isRequired={true}
+          forInput='umur'
           type='number'
           {...register("umur")}
           id='umur'
@@ -73,13 +74,13 @@ export default function SurveyFormPage() {
           Berapa umur anda?
         </InputNormal>
 
-        <div class='bg-white shadow-sm rounded-lg'>
-          <div class='flex flex-col gap-4 px-4 md:px-8 py-2 md:py-4'>
-            <p class='font-medium text-sm md:text-base'>
+        <div className='bg-white shadow-sm rounded-lg'>
+          <div className='flex flex-col gap-4 px-4 md:px-8 py-2 md:py-4'>
+            <p className='font-medium text-sm md:text-base'>
               Apa jenis kelamin anda?
-              <span class='text-red-500'>*</span>
+              <span className='text-red-500'>*</span>
             </p>
-            <div class='flex gap-8 items-center'>
+            <div className='flex gap-8 items-center'>
               <InputChoice
                 label='Laki-laki'
                 forInput='male'
@@ -101,10 +102,10 @@ export default function SurveyFormPage() {
           </div>
         </div>
 
-        <div class='bg-white shadow-sm rounded-lg'>
-          <div class='flex flex-col gap-4 px-4 md:px-8 py-2 md:py-4'>
-            <p class='font-medium text-sm md:text-base'>
-              Apakah anda perokok?<span class='text-red-500'>*</span>
+        <div className='bg-white shadow-sm rounded-lg'>
+          <div className='flex flex-col gap-4 px-4 md:px-8 py-2 md:py-4'>
+            <p className='font-medium text-sm md:text-base'>
+              Apakah anda perokok?<span className='text-red-500'>*</span>
             </p>
             <InputChoice
               label='Ya'
@@ -126,12 +127,12 @@ export default function SurveyFormPage() {
           </div>
         </div>
 
-        <div class='bg-white shadow-sm rounded-lg'>
-          <div class='flex flex-col gap-4 px-4 md:px-8 py-2 md:py-4'>
-            <p class='font-medium text-sm md:text-base'>
+        <div className='bg-white shadow-sm rounded-lg'>
+          <div className='flex flex-col gap-4 px-4 md:px-8 py-2 md:py-4'>
+            <p className='font-medium text-sm md:text-base'>
               Jika anda perokok, rokok apa yang anda pernah coba?
             </p>
-            <div class='flex flex-col gap-2'>
+            <div className='flex flex-col gap-2'>
               <InputChoice
                 label='Gudang Garam Filter'
                 forInput='ggm'
@@ -167,7 +168,7 @@ export default function SurveyFormPage() {
             </div>
           </div>
         </div>
-        <div class='w-full flex justify-between items-center'>
+        <div className='w-full flex justify-between items-center'>
           <Button type='submit' variant='primary'>
             Submit
           </Button>

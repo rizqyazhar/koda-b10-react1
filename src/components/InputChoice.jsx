@@ -1,12 +1,12 @@
 export default function InputChoice(props) {
   const { label, forInput, ...rest } = props;
   return (
-    <div class='flex items-center gap-2'>
+    <div className='flex items-center gap-2'>
       <input
-        class='outline-none border-b border-violet-50 py-2 label-sm md:text-base'
+        className='outline-none border-b border-violet-50 py-2 label-sm md:text-base'
         {...rest}
       />
-      <label forHtml={forInput} class='text-sm md:text-base'>
+      <label htmlFor={forInput} className='text-sm md:text-base'>
         {label}
       </label>
     </div>

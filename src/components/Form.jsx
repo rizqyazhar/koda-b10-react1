@@ -1,19 +1,23 @@
 export default function Form(props) {
   const { children, title, description, email, ...rest } = props;
   return (
-    <form {...rest} class='w-fit flex flex-col gap-4'>
-      <div class='bg-white shadow-sm border-t-8 border-violet-700 rounded-lg'>
-        <div class='flex flex-col gap-4 px-4 md:px-8 py-2 md:py-4'>
-          <div class='flex flex-col gap-1'>
-            <h1 class='text-slate-900 text-lg md:text-2xl font-medium'>
+    <form {...rest} className='w-fit flex flex-col gap-4'>
+      <div className='bg-white shadow-sm border-t-8 border-violet-700 rounded-lg'>
+        <div className='flex flex-col gap-4 px-4 md:px-8 py-2 md:py-4'>
+          <div className='flex flex-col gap-1'>
+            <h1 className='text-slate-900 text-lg md:text-2xl font-medium'>
               {title}
             </h1>
-            <p class='text-sm md:text-base text-slate-900/50'>{description}</p>
+            <p className='text-sm md:text-base text-slate-900/50'>
+              {description}
+            </p>
           </div>
-          <div class='border-y border-violet-50 py-4 flex justify-between items-center'>
+          <div className='border-y border-violet-50 py-4 flex justify-between items-center'>
             <div>
-              <span class='text-slate-900/50 text-xs md:text-sm'>{email}</span>
-              <button class='text-slate-900/50 text-xs md:text-sm'>
+              <span className='text-slate-900/50 text-xs md:text-sm'>
+                {email}
+              </span>
+              <button className='text-slate-900/50 text-xs md:text-sm'>
                 Switch Account
               </button>
             </div>
@@ -34,7 +38,7 @@ export default function Form(props) {
               </svg>
             </button>
           </div>
-          <span class='text-red-500 font-medium text-xs md:text-sm'>
+          <span className='text-red-500 font-medium text-xs md:text-sm'>
             * Harus diisi!
           </span>
         </div>

@@ -4,7 +4,7 @@ export default function Nav() {
   const location = useLocation();
   const pathname = location.pathname;
   return (
-    <nav class='w-1/4 flex items-center justify-evenly'>
+    <nav className='w-1/4 flex items-center justify-evenly'>
       <Link
         to='/'
         className={`${pathname === "/" ? "pointer-events-none bg-violet-700 text-white rounded-sm" : null} px-4 py-2 text-sm md:text-base hover:underline hover:decoration-wavy`}>
