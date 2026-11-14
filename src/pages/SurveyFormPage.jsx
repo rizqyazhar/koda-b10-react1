@@ -6,6 +6,7 @@ import Form from "../components/Form";
 import InputNormal from "../components/InputNormal";
 import InputChoice from "../components/InputChoice";
 import Button from "../components/Button";
+import { useNavigate } from "react-router";
 
 const schema = yup.object({
   nama: yup.string().required("Nama harus diisi"),
@@ -36,6 +37,8 @@ export default function SurveyFormPage() {
     resolver: yupResolver(schema),
   });
 
+  const navigate = useNavigate();
+
   const getData = JSON.parse(window.localStorage.getItem("survey")) || [];
 
   const pushData = (data) => {
@@ -58,6 +61,7 @@ export default function SurveyFormPage() {
 
     window.localStorage.setItem("survey", JSON.stringify(saveData));
     reset();
+    navigate("/table");
     return;
   };
 
