@@ -39,9 +39,18 @@ export default function SurveyFormPage() {
   const getData = JSON.parse(window.localStorage.getItem("survey")) || [];
 
   const pushData = (data) => {
-    getData.push(data);
+    const { nama, umur, gender, smoking, cigarettes } = data;
+    const predefinedCigarettes = ["ggm", "ls", "mb", "es"];
 
-    window.localStorage.setItem("survey", JSON.stringify(getData));
+    const cigarettesCompared = predefinedCigarettes.map((item) =>
+      cigarettes.includes(item),
+    );
+
+    const tempData = { nama, umur, gender, smoking, cigarettesCompared };
+
+    getData.push(tempData);
+
+    window.localStorage.setItem("survey", JSON.stringify(tempData));
     reset();
     return;
   };
