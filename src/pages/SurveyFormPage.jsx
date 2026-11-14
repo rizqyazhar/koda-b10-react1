@@ -54,9 +54,9 @@ export default function SurveyFormPage() {
       cigarettes: cigarettesCompared,
     };
 
-    getData.push(tempData);
+    const saveData = [...getData, tempData];
 
-    window.localStorage.setItem("survey", JSON.stringify(tempData));
+    window.localStorage.setItem("survey", JSON.stringify(saveData));
     reset();
     return;
   };
