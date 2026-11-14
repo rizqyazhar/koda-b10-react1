@@ -6,13 +6,11 @@ export default function TablePage() {
   const getDataFromLocalStorage =
     JSON.parse(window.localStorage.getItem("survey")) || [];
 
-  console.log(getDataFromLocalStorage);
-
   return (
     <Layout>
       <TableLayout>
         {getDataFromLocalStorage.map((item, index) => {
-          return <RowTable key={index} data={item} />;
+          return <RowTable key={`row-${index + 1}`} data={item} />;
         })}
       </TableLayout>
     </Layout>

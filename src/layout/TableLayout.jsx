@@ -8,28 +8,28 @@ export default function TableLayout(props) {
             <th
               className='text-nowrap p-2 border-b-2 border-violet-200'
               scope='col'
-              rowspan='2'>
+              rowSpan='2'>
               Nama
             </th>
             <th
               className='text-nowrap p-2 border-b-2 border-violet-200'
               scope='col'
-              rowspan='2'>
+              rowSpan='2'>
               Umur
             </th>
             <th
               className='text-nowrap p-2 border-b-2 border-violet-200'
               scope='col'
-              rowspan='2'>
+              rowSpan='2'>
               Jenis Kelamin
             </th>
             <th
               className='text-nowrap p-2 border-b-2 border-violet-200'
               scope='col'
-              rowspan='2'>
+              rowSpan='2'>
               Perokok
             </th>
-            <th scope='col' colspan='4'>
+            <th scope='col' colSpan='4'>
               Jenis Rokok
             </th>
           </tr>
@@ -37,13 +37,13 @@ export default function TableLayout(props) {
             <th
               className='text-nowrap p-2 border-b-2 border-violet-200'
               scope='col'
-              rowspan='2'>
+              rowSpan='2'>
               Gudang Garam Filter
             </th>
             <th
               className='text-nowrap p-2 border-b-2 border-violet-200'
               scope='col'
-              rowspan='2'>
+              rowSpan='2'>
               Lucky Strike
             </th>
             <th

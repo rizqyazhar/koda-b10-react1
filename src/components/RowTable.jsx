@@ -9,8 +9,8 @@ export default function RowTable(props) {
       <DataTable>{gender}</DataTable>
       <DataTable>{umur}</DataTable>
       <DataTable>{smoking}</DataTable>
-      {cigarettes.map((item) => {
-        return <DataTable>{item ? "\u2713" : ""}</DataTable>;
+      {cigarettes.map((item, index) => {
+        return <DataTable key={index}>{item ? "\u2713" : ""}</DataTable>;
       })}
     </tr>
   );
